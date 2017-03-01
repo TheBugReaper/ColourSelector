@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body onload="init()">
+<div id="Colour-Selector">
+    <!-- 主要选择区域 -->
+    <canvas id="First-Selector" width="360px" height="360px">
+
+    </canvas>
+    <!-- 色调选择区域 -->
+    <canvas id="Second-Selector" width="10px" height="360px">
+
+    </canvas>
+    <!-- 色彩预览区域 -->
+    <canvas id="Colour-Preview" width="50px" height="50px">
+
+    </canvas>
+    <!-- 表单 -->
+    <form id="form">
+        <div id="rgb">
+            <input type="number" name="r" min="0" max="255" onchange="onChangeRGB()">
+            <label>g</label>
+            <input type="number" name="g" min="0" max="255" onchange="onChangeRGB()">
+            <label>b</label>
+            <input type="number" name="b" min="0" max="255" onchange="onChangeRGB()">
+        </div>
+        <div id="hsl">
+            <label>h</label>
+            <input type="number" name="h" min="0" max="360" onchange="onChangeHSL()">
+            <label>s</label>
+            <input type="number" name="s" min="0" max="1" step="0.01" onchange="onChangeHSL()">
+            <label>l</label>
+            <input type="number" name="l" min="0" max="1" step="0.01" onchange="onChangeHSL()">
+        </div>
+    </form>
+</div>
+
+<script src="ColourSelector.js"></script>
+</body>
+</html>
